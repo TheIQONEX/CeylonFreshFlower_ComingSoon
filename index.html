@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Ceylon Fresh Flower Farm — Something beautiful is blooming."
+    />
+
+    <title>Ceylon Fresh Flower Farm | Coming Soon</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: "#064C35",
+              cream: "#F7F8F2",
+              sage: "#DCE7D9",
+            },
+
+            fontFamily: {
+              sans: ["DM Sans", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+
+            animation: {
+              "float-flower": "floatFlower 6s ease-in-out infinite",
+              "ambient-one": "ambientOne 16s ease-in-out infinite",
+              "ambient-two": "ambientTwo 20s ease-in-out infinite",
+              "ambient-three": "ambientThree 18s ease-in-out infinite",
+            },
+
+            keyframes: {
+              floatFlower: {
+                "0%, 100%": {
+                  transform: "translateY(0px) rotate(0deg)",
+                },
+
+                "50%": {
+                  transform: "translateY(-14px) rotate(1deg)",
+                },
+              },
+
+              ambientOne: {
+                "0%, 100%": {
+                  transform: "translate(0,0) scale(1)",
+                },
+
+                "50%": {
+                  transform: "translate(140px,80px) scale(1.15)",
+                },
+              },
+
+              ambientTwo: {
+                "0%, 100%": {
+                  transform: "translate(0,0) scale(1)",
+                },
+
+                "50%": {
+                  transform: "translate(-120px,-100px) scale(1.12)",
+                },
+              },
+
+              ambientThree: {
+                "0%, 100%": {
+                  transform: "translate(0,0) scale(1)",
+                },
+
+                "33%": {
+                  transform: "translate(-80px,60px) scale(1.12)",
+                },
+
+                "66%": {
+                  transform: "translate(70px,-50px) scale(.95)",
+                },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: #f7f8f2;
+      }
+
+      /* Subtle grain texture */
+      .grain {
+        position: fixed;
+        inset: 0;
+
+        pointer-events: none;
+
+        z-index: 50;
+
+        opacity: 0.035;
+
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.5'/%3E%3C/svg%3E");
+
+        mix-blend-mode: multiply;
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream text-forest font-sans">
+    <!-- Grain -->
+    <div class="grain"></div>
+
+    <!-- PAGE -->
+    <div class="relative min-h-screen overflow-hidden">
+      <!-- ======================================
+         ANIMATED BACKGROUND
+    ======================================= -->
+
+      <!-- Top Left Glow -->
+      <div
+        class="pointer-events-none absolute -top-64 -left-48 h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle,rgba(184,207,190,0.25)_0%,rgba(184,207,190,0.10)_40%,transparent_72%)] blur-3xl animate-ambient-one"
+      ></div>
+
+      <!-- Bottom Right Glow -->
+      <div
+        class="pointer-events-none absolute -bottom-72 -right-72 h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle,rgba(213,222,197,0.30)_0%,rgba(213,222,197,0.12)_40%,transparent_72%)] blur-3xl animate-ambient-two"
+      ></div>
+
+      <!-- Middle Soft Glow -->
+      <div
+        class="pointer-events-none absolute right-[15%] top-[25%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(208,224,207,0.22),transparent_70%)] blur-3xl animate-ambient-three"
+      ></div>
+
+      <!-- ======================================
+         HEADER
+    ======================================= -->
+
+      <header
+        class="relative z-10 flex h-[85px] items-center justify-center border-b border-forest/10 px-6 md:h-[95px]"
+      >
+        <!-- LOGO -->
+
+        <a href="./">
+          <img
+            src="logo.png"
+            alt="Ceylon Fresh Flower Farm"
+            class="w-[80px] object-contain md:w-[95px]"
+          />
+        </a>
+      </header>
+
+      <!-- ======================================
+         MAIN HERO
+    ======================================= -->
+
+      <main
+        class="relative z-10 mx-auto grid min-h-[680px] w-[90%] max-w-[1400px] items-center lg:grid-cols-[48%_52%]"
+      >
+        <!-- ======================================
+           LEFT CONTENT
+      ======================================= -->
+
+        <section
+          class="relative z-10 pt-20 text-center lg:pt-0 lg:pl-[5vw] lg:text-left"
+        >
+          <!-- Small label -->
+
+          <p
+            class="mb-7 text-[8px] font-medium tracking-[0.28em] text-forest/70 md:mb-8 md:text-[9px]"
+          >
+            CEYLON FRESH FLOWER FARM
+          </p>
+
+          <!-- Main Heading -->
+
+          <h1
+            class="font-serif text-[clamp(52px,8vw,108px)] font-normal leading-[0.88] tracking-[-0.055em]"
+          >
+            Something
+
+            <br />
+
+            <span class="italic lg:ml-16"> beautiful </span>
+
+            <br />
+
+            is blooming.
+          </h1>
+
+          <!-- Description -->
+
+          <p
+            class="mx-auto mt-8 max-w-[310px] text-[11px] leading-7 text-forest/65 md:text-[12px] lg:mx-0 lg:mt-10"
+          >
+            We're cultivating a new digital experience for Ceylon Fresh Flower
+            Farm.
+          </p>
+
+          <!-- Coming Soon -->
+
+          <div
+            class="mt-9 flex items-center justify-center gap-4 lg:mt-11 lg:justify-start"
+          >
+            <span class="h-px w-12 bg-forest/40"></span>
+
+            <p
+              class="whitespace-nowrap text-[8px] font-medium tracking-[0.28em] md:text-[9px]"
+            >
+              COMING SOON
+            </p>
+
+            <span class="h-px w-12 bg-forest/40"></span>
+          </div>
+        </section>
+
+        <!-- ======================================
+           FLOWER AREA
+      ======================================= -->
+
+        <section
+          class="relative flex h-[430px] items-center justify-center sm:h-[500px] lg:h-[650px]"
+        >
+          <!-- Circle -->
+
+          <div
+            class="absolute h-[75vw] w-[75vw] max-h-[520px] max-w-[520px] rounded-full border border-forest/15 bg-[radial-gradient(circle,rgba(255,255,255,0.65),rgba(230,235,224,0.20))]"
+          ></div>
+
+          <!-- Small Text -->
+
+          <div
+            class="absolute right-[3%] top-[14%] z-10 text-[6px] leading-relaxed tracking-[0.18em] text-forest/60 sm:text-[8px] lg:right-[2%] lg:top-[18%]"
+          >
+            FRESHLY GROWN
+
+            <br />
+
+            NATURALLY BEAUTIFUL
+          </div>
+
+          <!-- Flower Image -->
+
+          <img
+            src="flower.png"
+            alt="Fresh flowers"
+            class="relative z-[2] w-[80vw] max-w-[500px] object-contain drop-shadow-[0_30px_30px_rgba(20,50,35,0.12)] animate-float-flower lg:w-[42vw]"
+          />
+
+          <!-- Vertical Text -->
+
+          <div
+            class="absolute bottom-[13%] right-[3%] text-[6px] tracking-[0.3em] text-forest/50 [writing-mode:vertical-rl] sm:text-[8px] lg:bottom-[18%] lg:right-0"
+          >
+            CEYLON · SRI LANKA
+          </div>
+        </section>
+      </main>
+
+      <!-- ======================================
+         INFORMATION SECTION
+    ======================================= -->
+
+      <section
+        class="relative z-10 mx-auto grid w-[90%] max-w-[1400px] gap-8 border-t border-forest/10 px-2 py-8 md:grid-cols-2 md:gap-10 md:px-[5vw] lg:grid-cols-3"
+      >
+        <!-- Item 1 -->
+
+        <div class="flex gap-4">
+          <span class="font-serif text-lg italic text-forest/60"> 01 </span>
+
+          <div>
+            <h3 class="font-serif text-[17px] font-normal">Freshly Grown</h3>
+
+            <p class="mt-1 text-[10px] leading-relaxed text-forest/60">
+              Beautiful flowers grown with care.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+
+        <div class="flex gap-4">
+          <span class="font-serif text-lg italic text-forest/60"> 02 </span>
+
+          <div>
+            <h3 class="font-serif text-[17px] font-normal">Coming Soon</h3>
+
+            <p class="mt-1 text-[10px] leading-relaxed text-forest/60">
+              Our new website is currently blooming.
+            </p>
+          </div>
+        </div>
+
+        <!-- Social -->
+
+        <div class="md:col-span-2 lg:col-span-1">
+          <p class="mb-3 text-[8px] tracking-[0.2em] text-forest/60">
+            FOLLOW OUR JOURNEY
+          </p>
+
+          <div class="flex gap-5">
+            <!-- Replace # with real links -->
+
+            <a
+              href="#"
+              class="border-b border-forest/40 pb-1 text-[10px] transition hover:border-forest"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="#"
+              class="border-b border-forest/40 pb-1 text-[10px] transition hover:border-forest"
+            >
+              Facebook
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================
+         FOOTER
+    ======================================= -->
+
+      <footer
+        class="relative z-10 mx-auto flex w-[90%] max-w-[1400px] flex-col items-center gap-2 border-t border-forest/5 px-2 py-5 text-center text-[8px] tracking-[0.08em] text-forest/55 md:flex-row md:justify-between md:px-[5vw] md:text-left"
+      >
+        <p>© 2026 Ceylon Fresh Flower Farm</p>
+
+        <p>Grown with love in Sri Lanka</p>
+
+        <!-- The IQONEX -->
+
+        <p>
+          Crafted by
+
+          <a
+            href="https://theiqonex.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="ml-1 border-b border-forest/40 pb-[2px] font-medium text-forest transition hover:opacity-60"
+          >
+            THE IQONEX
+          </a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
